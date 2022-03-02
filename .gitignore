@@ -44,3 +44,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# other files to ignore
+.android
+.README.md
+.pubspec.lock
+.web
+.test
+.ios

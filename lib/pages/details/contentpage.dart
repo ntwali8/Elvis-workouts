@@ -50,7 +50,7 @@ class ContentPage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      day.id,
+                      "Day " + day.id,
                       style: const TextStyle(
                         color: Colors.white54,
                         fontWeight: FontWeight.bold,

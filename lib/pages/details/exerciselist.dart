@@ -3,7 +3,7 @@ import '../../model.dart';
 
 class ExerciseList extends StatelessWidget {
   final List<Exercise> exercises;
-  ExerciseList({Key? key, required this.exercises}) : super(key: key);
+  const ExerciseList({Key? key, required this.exercises}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,10 +55,10 @@ class ExerciseTile extends StatelessWidget {
             showDialog(
               context: context,
               builder: (BuildContext context) => SimpleDialog(
-                elevation: 80.0,
+                // elevation: 80.0,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(9.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: Column(
                       children: [
                         ClipRRect(
@@ -84,19 +84,18 @@ class ExerciseTile extends StatelessWidget {
                         const SizedBox(
                           height: 20,
                         ),
-                        const Text(
-                          "You have to follow the procedures as described"
-                          " in the app, failure to do so can lead to muscle"
-                          "pain and joint complications",
-                          style: TextStyle(
+                        Text(
+                          exercise.description,
+                          style: const TextStyle(
                             color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
                     ),
                   ),
                 ],
-                backgroundColor: Colors.black,
+                backgroundColor: const Color.fromRGBO(21, 37, 49, 1.0),
               ),
             );
           },
